@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Новогодний квест</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__title">
+                <a href="index.html" class="burger back_home">
+                    <i class="material-icons">menu</i>
+                </a>
+                <img src="img/logo1.PNG" alt="Логотип" class="logo-synopsis">
+            </div>
+            <h1 class="h1">Eugene Blogs Company</h1>
+            <h4 class="h4">Студия разработки игр, программ и сайтов</h4>
+        </div>
+    </header>
+    <section>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <marquee direction="right" scrollamount="15">
+                        <h2 class="mt-5 text-uppercase">Новогодний переполох (<span id="timer-counter"></span>)</h2>
+                    </marquee>
+                    <h6>Для того, чтобы полностью пройти данный квест, состоящий из 15 уровней, и получить СЕКРЕТНЫЙ
+                        ПРИЗ - необязательно иметь сверхспособности!<br>Каждый уровень заблокирован паролем. Пароль
+                        спрятан в подсказке.<br>Внимательно рассматривайте каждое фото, видео, текст или аудио, так как
+                        пароль спрятан где-то там!</h6>
+                    <div class="progress mt-5" role="progressbar">
+                        <div class="progress-bar bg-info" id="progressbar" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-quest">
+                        <div class="circle active">
+                            <span class="label">1</span>
+                            <span class="title">Символы</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">2</span>
+                            <span class="title">Математика</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">3</span>
+                            <span class="title">Ёлочка</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">4</span>
+                            <span class="title">Буквы</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">5</span>
+                            <span class="title">Возраст</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">6</span>
+                            <span class="title">Стук</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">7</span>
+                            <span class="title">ВК</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">8</span>
+                            <span class="title">Салют</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">9</span>
+                            <span class="title">Цвета</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">10</span>
+                            <span class="title">Ошибка</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">11</span>
+                            <span class="title">Опять?</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">12</span>
+                            <span class="title">Эмодзи</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">13</span>
+                            <span class="title">Число=?</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">14</span>
+                            <span class="title">Криптография</span>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="circle">
+                            <span class="label">15</span>
+                            <span class="title">Песня</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="level_1">
+                    <h3 class="mb-5">Уровень 1.</h3>
+                    <div class="paper" id="tip-1">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>Русская раскладка + Shift</р>
+                    </div>
+                    <h1 class="border border-danger p-3">2020 - ")")<br>2021 - ")"!<br>2022 - ")""<br>2023 - ?</h1>
+                    <button class="btn btn-info mt-5" onclick="Answer1()">Ответить</button>
+                </div>
+                <div id="level_2" style="display: none;">
+                    <h3 class="mb-5">Уровень 2.</h3>
+                    <div class="paper" id="tip-2">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>1 фонарь = 5<br>Ёлка = 3<br>Снеговик = 4</р>
+                    </div>
+                    <img src="img/Задание квеста 2.jpg" alt="Подсказка">
+                    <button class="btn btn-info mt-5" onclick="Answer2()">Ответить</button>
+                </div>
+                <div id="level_3" style="display: none;">
+                    <h3 class="mb-5">Уровень 3.</h3>
+                    <div class="paper" id="tip-3">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>Время на часах</р>
+                    </div>
+                    <img src="img/Задание квеста 3 и 11.JPG" alt="Подсказка">
+                    <button class="btn btn-info mt-5" onclick="Answer3()">Ответить</button>
+                </div>
+                <div id="level_4" style="display: none;">
+                    <h3 class="mb-5">Уровень <span class="text-danger">4</span>.</h3>
+                    <div class="paper" id="tip-4">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>Каждая 4-я буква</р>
+                    </div>
+                    <h1 class="border border-danger p-3">КРТДТСВЕНКЛД РЙЦМХПКОМТВРЛДЕОЯЭЁЗ</h1>
+                    <button class="btn btn-info mt-5" onclick="Answer4()">Ответить</button>
+                </div>
+                <div id="level_5" style="display: none;">
+                    <h3 class="mb-5">Уровень 5.</h3>
+                    <div class="paper" id="tip-5">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>2022 - 14 лет<br>2033 - ? лет</р>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 col-sm-12">
+                            <img src="img/Задание квеста 5.JPEG" alt="Подсказка">
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-sm-12">
+                            <h1 class="border border-danger p-3">2022 - (фото)<br>2033 - ?</h1>
+                        </div>
+                    </div>
+                    <button class="btn btn-info mt-5" onclick="Answer5()">Ответить</button>
+                </div>
+                <div id="level_6" style="display: none;">
+                    <h3 class="mb-5">Уровень 6.</h3>
+                    <div class="paper" id="tip-6">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>..--- ----- ..--- ...--</р>
+                    </div>
+                    <audio controls>
+                        <source src="img/Задание квеста 6.m4a">
+                    </audio>
+                    <br>
+                    <button class="btn btn-info mt-5" onclick="Answer6()">Ответить</button>
+                </div>
+                <div id="level_7" style="display: none;">
+                    <h3 class="mb-5">Уровень 7.</h3>
+                    <div class="paper" id="tip-7">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>Выделенное число</р>
+                    </div>
+                    <video width="550" height="300" controls>
+                        <source src="img/Задание квеста 7.MOV">
+                    </video>
+                    <br>
+                    <button class="btn btn-info mt-5" onclick="Answer7()">Ответить</button>
+                </div>
+                <div id="level_8" style="display: none;">
+                    <h3 class="mb-5">Уровень 8.</h3>
+                    <div class="paper" id="tip-8">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>Количество фейерверков</р>
+                    </div>
+                    <video width="550" height="300" controls>
+                        <source src="img/Задание квеста 8.mp4">
+                    </video>
+                    <br>
+                    <button class="btn btn-info mt-5" onclick="Answer8()">Ответить</button>
+                </div>
+                <div id="level_9" style="display: none;">
+                    <h3 class="mb-5">Уровень 9.</h3>
+                    <div class="paper" id="tip-9">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>Цвет кролика 2023 года</р>
+                    </div>
+                    <h1 class="border border-danger p-3">2015 - ЗЕЛЁНЫЙ<br>2021 - БЕЛЫЙ<br>2022 - ГОЛУБОЙ<br>2023 - ?
+                    </h1>
+                    <button class="btn btn-info mt-5" onclick="Answer9()">Ответить</button>
+                </div>
+                <div id="level_10" style="display: none;">
+                    <h3 class="mb-5">Уровень 10.</h3>
+                    <div class="paper" id="tip-10">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>Код ошибки</р>
+                    </div>
+                    <h1 class="border border-danger p-3">Bad Request.</h1>
+                    <button class="btn btn-info mt-5" onclick="Answer10()">Ответить</button>
+                </div>
+                <div id="level_11" style="display: none;">
+                    <h3 class="mb-5">Уровень 11.⭐</h3>
+                    <div class="paper" id="tip-11">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>Количество звёзд на ёлке</р>
+                    </div>
+                    <img src="img/Задание квеста 3 и 11.JPG" alt="Подсказка">
+                    <button class="btn btn-info mt-5" onclick="Answer11()">Ответить</button>
+                </div>
+                <div id="level_12" style="display: none;">
+                    <h3 class="mb-5">Уровень 12.</h3>
+                    <div class="paper" id="tip-12">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>Фильм в эмодзи</р>
+                    </div>
+                    <h1 class="border border-danger p-3">✈👩🏠👦</h1>
+                    <button class="btn btn-info mt-5" onclick="Answer12()">Ответить</button>
+                </div>
+                <div id="level_13" style="display: none;">
+                    <h3 class="mb-5">Уровень 13.</h3>
+                    <div class="paper" id="tip-13">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>4 - Г<br>6 - Е<br>15 - Н<br>19 - С</р>
+                    </div>
+                    <h1 class="border border-danger p-3">19-15-6-4</h1>
+                    <button class="btn btn-info mt-5" onclick="Answer13()">Ответить</button>
+                </div>
+                <div id="level_14" style="display: none;">
+                    <h3 class="mb-5">Уровень 14.</h3>
+                    <div class="paper" id="tip-14">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>Сопоставить вырезы для букв</р>
+                    </div>
+                    <img src="img/Задание квеста 14-1.png" alt="Подсказка">
+                    <img src="img/Задание квеста 14-2.png" alt="Подсказка">
+                    <button class="btn btn-info mt-5" onclick="Answer14()">Ответить</button>
+                </div>
+                <div id="level_15" style="display: none;">
+                    <h3 class="mb-5">Уровень 15.</h3>
+                    <div class="paper" id="tip-15">
+                        <div class="pin">
+                            <div class="shadow"></div>
+                            <div class="metal"></div>
+                            <div class="bottom-circle"></div>
+                        </div>
+                        <p>1:56 - лишнее слово</р>
+                    </div>
+                    <audio controls>
+                        <source src="img/Задание квеста 15.mp3">
+                    </audio>
+                    <br>
+                    <button class="btn btn-info mt-5" onclick="Answer15()">Ответить</button>
+                </div>
+                <div id="prize" style="display: none;">
+                    <h3 class="mb-5">Квест пройден!</h3>
+                    <h1 class="border border-success p-3">Поздравляем! Вы успешно справились с испытанием!<br>Ваш приз -
+                        ссылка, которая ведёт на новогоднюю открытку, которой вы можете поздравить своего друга,
+                        родственника или любого близкого вам человека!</h1>
+                    <button class="btn btn-warning mt-5" onclick="Prize()">Получить подарок!</button>
+                </div>
+            </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__flex">
+                <div class="footer__flex-left">
+                    <p class="footer-p" id="copyright">© 2022 Eugene Blogs Company</p>
+                </div>
+                <div class="footer__flex-center">
+                    <p class="footer-p">Все права защищены.</p>
+                </div>
+                <div class="footer__flex-right">
+                    <p class="footer-p">Разработано лучшей студией программирования :)</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        window.onload = function () {
+            document.getElementById("copyright").innerHTML = `© ${new Date().getUTCFullYear()} Eugene Blogs Company`
+        };
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+            document.querySelector(".progress").style.display = "block"
+            document.querySelector(".progress-quest").style.display = "none"
+        } else {
+            document.querySelector(".progress").style.display = "none"
+            document.querySelector(".progress-quest").style.display = "block"
+        }
+        var i = 1;
+        function UpdateProgress() {
+            $('.progress-quest .circle:nth-of-type(' + (i + 1) + ')').addClass('active');
+            $('.progress-quest .circle:nth-of-type(' + i + ')').removeClass('active').addClass('done');
+            $('.progress-quest .circle:nth-of-type(' + i + ') .label').html('&#10003;');
+            $('.progress-quest .bar:nth-of-type(' + (i + 1) + ')').addClass('active');
+            $('.progress-quest .bar:nth-of-type(' + i + ')').removeClass('active').addClass('done');
+            i++;
+        }
+        startdate = new Date();
+        clockStart = startdate.getTime();
+        function initStopwatchAll() {
+            var thisTime = new Date();
+            return (thisTime.getTime() - clockStart) / 1000;
+        }
+        function getSecsAll() {
+            var tSecs = Math.round(initStopwatchAll());
+            var iSecs = tSecs % 60;
+            var iMins = Math.round((tSecs - 30) / 60);
+            var sSecs = "" + ((iSecs > 9) ? iSecs : "0" + iSecs);
+            var sMins = "" + ((iMins > 9) ? iMins : "0" + iMins);
+            if (i != 16) {
+                document.getElementById("timer-counter").innerHTML = sMins + ":" + sSecs;
+            }
+            setTimeout('getSecsAll()', 1000);
+        }
+        getSecsAll()
+        startdate_q = new Date();
+        clockStart_q = startdate_q.getTime();
+        function initStopwatch() {
+            var thisTime = new Date();
+            return (thisTime.getTime() - clockStart_q) / 1000;
+        }
+        function getSecs() {
+            var tSecs = Math.round(initStopwatch());
+            var iSecs = tSecs % 60;
+            var iMins = Math.round((tSecs - 30) / 60);
+            var sSecs = "" + ((iSecs > 9) ? iSecs : "0" + iSecs);
+            var sMins = "" + ((iMins > 9) ? iMins : "0" + iMins);
+            if (Number(sSecs) == 0 && Number(sMins) >= 1) {
+                if (confirm(`Вы думаете над этой задачей ${Number(sMins)} минут. Вам нужна подсказка?`) == true) {
+                    if (i == 1) {
+                        document.getElementById("tip-1").style.display = "flex"
+                        alert("А что будет, если на русской раскладке клавиатуры с нажатой клавишей Shift написать это число?")
+                    } else if (i == 2) {
+                        document.getElementById("tip-2").style.display = "flex"
+                        alert("1 фонарь = 5\nЁлка = 3\nСнеговик = 4\nДальше сами :) Не забудьте о порядке действий!")
+                    } else if (i == 3) {
+                        document.getElementById("tip-3").style.display = "flex"
+                        alert("Какое время показывают часы (ёлочная игрушка)?")
+                    } else if (i == 4) {
+                        document.getElementById("tip-4").style.display = "flex"
+                        alert("Читайте каждую 4 букву в строке. Кстати, вам на это намекала выделенная цифра 4 в номере уровня! Повнимательней :)")
+                    } else if (i == 5) {
+                        document.getElementById("tip-5").style.display = "flex"
+                        alert("В 2022 году мне было 14 лет (я получил паспорт). А сколько мне будет в 2033?")
+                    } else if (i == 6) {
+                        document.getElementById("tip-6").style.display = "flex"
+                        alert("Это Азбука Морзе. Сопоставьте звуки с цифрами.\n0 = ----- (5 тире)\n1 = .---- (1 точка 4 тире)\n 2 = ..--- (2 точки 3 тире)\n3 = ...-- (3 точки 2 тире)\n4 = ....- (4 точки 1 тире)\n5 = ..... (5 точек)\n6 = -.... (1 тире 4 точки)\n7 = --... (2 тире 3 точки)\n8 = ---.. (3 тире 2 точки)\n9 = ----. (4 тире 1 точка)")
+                    } else if (i == 7) {
+                        document.getElementById("tip-7").style.display = "flex"
+                        alert("Найдите число, которое выделено.")
+                    } else if (i == 8) {
+                        document.getElementById("tip-8").style.display = "flex"
+                        alert("Сколько раз стрельнул фейерверк?")
+                    } else if (i == 9) {
+                        document.getElementById("tip-9").style.display = "flex"
+                        alert("Каждому году соответсвует какое-то животное какого-то цвета. Какой цвет у кролика 2023 года?")
+                    } else if (i == 10) {
+                        document.getElementById("tip-10").style.display = "flex"
+                        alert("Найдите в интернете какой код у этой ошибки.")
+                    } else if (i == 11) {
+                        document.getElementById("tip-11").style.display = "flex"
+                        alert("Посчитайте количество звёздочек (ёлочные игрушки) на ёлки. Кстати, вам на это намекала звёздочка в номере уровня! Ещё больше внимания :)")
+                    } else if (i == 12) {
+                        document.getElementById("tip-12").style.display = "flex"
+                        alert("В смайликах зашифрован фильм, которой являестя символам Рождества.")
+                    } else if (i == 13) {
+                        document.getElementById("tip-13").style.display = "flex"
+                        alert("Каждое число - это порядковый номер буквы.\n4 - Г\n6 - Е\n15 - Н\n19 - С")
+                    } else if (i == 14) {
+                        document.getElementById("tip-14").style.display = "flex"
+                        alert("На втором фото белыми вырезами отмечены буквы, которые есть в этом слове (можно пытаться измерить на глаз, а можно скачать 2 фото и быстро их переключать).")
+                    } else if (i == 15) {
+                        document.getElementById("tip-15").style.display = "flex"
+                        alert("Послушайте внимательно песню на 1:56. По-моему там звучит какое-то слово, которого в тексте быть не должно.")
+                    }
+                }
+            }
+            setTimeout('getSecs()', 1000);
+        }
+        getSecs()
+        function Answer1() {
+            if (prompt("Ваш ответ:") == "\")\"№") {
+                alert("Молодец! Объяснение: если данный год написать, удерживая клавишу Shift на клавиатуре.")
+                $('#level_1').fadeOut(500, function () {
+                    document.getElementById("level_2").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '7%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer2() {
+            if (prompt("Ваш ответ:") == "22") {
+                alert("Молодец! Объяснение: чистая математика.")
+                $('#level_2').fadeOut(500, function () {
+                    document.getElementById("level_3").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '14%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer3() {
+            if (prompt("Ваш ответ:") == "11:35") {
+                alert("Молодец! Объяснение: время на часах (игрушка на ёлке).")
+                $('#level_3').fadeOut(500, function () {
+                    document.getElementById("level_4").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '21%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer4() {
+            if (prompt("Ваш ответ:").toString().toUpperCase() == "ДЕД МОРОЗ") {
+                alert("Молодец! Объяснение: каждый четвёртый символ в строке, так как уровень 4 (в названии выделена цифра 4).")
+                $('#level_4').fadeOut(500, function () {
+                    document.getElementById("level_5").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '28%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer5() {
+            if (prompt("Ваш ответ:") == "25") {
+                alert("Молодец! Объяснение: на фото в 14 лет я получил паспорт, то есть 2022 - 14, а в 2033 - 25 (мой возраст в 2033 году).")
+                $('#level_5').fadeOut(500, function () {
+                    document.getElementById("level_6").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '35%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer6() {
+            if (prompt("Ваш ответ:") == "2023") {
+                alert("Молодец! Объяснение: азбука Морзе.")
+                $('#level_6').fadeOut(500, function () {
+                    document.getElementById("level_7").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '42%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer7() {
+            if (prompt("Ваш ответ:") == "63") {
+                alert("Молодец! Объяснение: на видео специально выделена фраза \"Друзья 63\".")
+                $('#level_7').fadeOut(500, function () {
+                    document.getElementById("level_8").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '49%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer8() {
+            if (prompt("Ваш ответ:") == "5") {
+                alert("Молодец! Объяснение: количество запущенных фейерверков.")
+                $('#level_8').fadeOut(500, function () {
+                    document.getElementById("level_9").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '56%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer9() {
+            if (prompt("Ваш ответ:").toString().toUpperCase() == "ГОЛУБОЙ") {
+                alert("Молодец! Объяснение: у каждого года - своё животное, это цвет данного животного.")
+                $('#level_9').fadeOut(500, function () {
+                    document.getElementById("level_10").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '63%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer10() {
+            if (prompt("Ваш ответ:") == "400") {
+                alert("Молодец! Объяснение: код ошибки, если сервер не смог правильно отреагировать на запрос со стороны пользователя.")
+                $('#level_10').fadeOut(500, function () {
+                    document.getElementById("level_11").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '70%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer11() {
+            if (prompt("Ваш ответ:") == "2") {
+                alert("Молодец! Объяснение: в названии помечена звёздочка, на фото 2 звезды.")
+                $('#level_11').fadeOut(500, function () {
+                    document.getElementById("level_12").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '77%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer12() {
+            if (prompt("Ваш ответ:").toString().toUpperCase() == "ОДИН ДОМА") {
+                alert("Молодец! Объяснение: в эмодзи зашифрован данный фильм.")
+                $('#level_12').fadeOut(500, function () {
+                    document.getElementById("level_13").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '84%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer13() {
+            if (prompt("Ваш ответ:").toString().toUpperCase() == "СНЕГ") {
+                alert("Молодец! Объяснение: цифры - порядковый номер буквы.")
+                $('#level_13').fadeOut(500, function () {
+                    document.getElementById("level_14").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '91%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer14() {
+            if (prompt("Ваш ответ:").toString().toUpperCase() == "ЁЛКА") {
+                alert("Молодец! Объяснение: на втором фото белыми вырезами отмечены буквы, которые есть в этом слове (можно пытаться измерить на глаз, а можно скачать 2 фото и быстро их переключать).")
+                $('#level_14').fadeOut(500, function () {
+                    document.getElementById("level_15").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '97%'
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Answer15() {
+            if (prompt("Ваш ответ:").toString().toUpperCase() == "СНЕГУРОЧКА") {
+                alert("Молодец! Объяснение: на 1:56 в песне на фоне слышно данное слово.")
+                alert(`Вы прошли все уровни за ${document.getElementById("timer-counter").innerHTML}.`)
+                $('#level_15').fadeOut(500, function () {
+                    document.getElementById("prize").style.display = "block"
+                });
+                document.getElementById('progressbar').style.width = '100%'
+                document.getElementById('progressbar').classList.add("progress-bar-striped")
+                document.getElementById('progressbar').classList.add("progress-bar-animated")
+                UpdateProgress()
+                startdate_q = new Date();
+                clockStart_q = startdate_q.getTime();
+                getSecs()
+            } else {
+                alert("Неверный пароль!");
+            }
+        }
+        function Prize() {
+            if (confirm("Перейти на страницу?") == true) {
+                window.open("https://eugeneblogs.github.io/HappyNewYear", "_blank");
+            }
+        }
+    </script>
+</body>
+
+</html>
